@@ -1,15 +1,27 @@
-header.navbar.navbar-default.navbar-static-top role = "navigation"
-  .container
-    ul#menu.nav.navbar-nav.navbar-left
-      a.text-center.navbar-brand href='#{root_path}' PEATIO
-      = top_nav_link(t('header.market'), market_path(current_market.id), 'exchange', target: true)
-      = top_nav_link(t('header.funds'), funds_path, 'money', controllers: ['funds']) if current_user
-      = top_nav_link(t('header.assets'), exchange_assets_path, 'bar-chart-o')
-      = top_nav_link(t('header.history'), order_history_path, 'book', controllers: ['history']) if current_user
-
-    ul.nav.navbar-nav.navbar-right
-      = render partial: 'shared/header_account_balance' if current_user && controller_name == 'markets'
-      = render partial: 'shared/header_profile_setting' if current_user
-      = top_nav_link(t('header.signin'), signin_path, '') unless current_user
-      = top_nav_link(t('header.signup'), signup_path, '') unless current_user
-      = render partial: 'shared/header_lang_sel'
+header.header
+  nav.navbar.navbar-default.navbar-static-top
+    .container
+      .navbar-header[style="font-family: 'Open Sans', sans-serif"]
+        button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"]
+          span.sr-only
+            | Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        img= image_tag "img/Logo.png", alt: "CoinHITEX", class: "img-logo"
+      ul#menu.nav.navbar-nav.navbar-left
+        a.text-center.navbar-brand href='#{root_path}' PEATIO
+        = top_nav_link(t('header.market'), market_path(current_market.id), 'exchange', target: true)
+        = top_nav_link(t('header.funds'), funds_path, 'money', controllers: ['funds']) if current_user
+        = top_nav_link(t('header.assets'), exchange_assets_path, 'bar-chart-o')
+        = top_nav_link(t('header.history'), order_history_path, 'book', controllers: ['history']) if current_user
+        = render partial: 'shared/header_account_balance' if current_user && controller_name == 'markets'
+        = render partial: 'shared/header_profile_setting' if current_user
+        = render partial: 'shared/header_lang_sel'
+      #navbar.navbar-collapse.collapse
+        .signin-buttons
+          ul.nav.navbar-nav.navbar-right.header-buttons
+            li
+              = link_to(t('header.signin'), signin_path, class: "active") unless current_user
+            li
+              = link_to(t('header.register'), signup_path, class: "default") unless current_user
