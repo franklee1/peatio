@@ -30,6 +30,7 @@
 #= require_tree ./component_data
 #= require_tree ./component_ui
 #= require_tree ./templates
+#= require_tree ./js
 
 $ ->
   BigNumber.config(ERRORS: false)

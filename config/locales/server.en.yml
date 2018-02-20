@@ -1036,14 +1036,18 @@ en:
       session:
         email: Username or Email
         password: Password
-        password_description_1: Set a password which has at least 6 characters and it's better
-        password_description_2: to contain uppercase and lowercase letters and numbers.
+        password_description_1: Set a password which has at least 6 characters and it's better to
+        password_description_2: contain uppercase and lowercase letters and numbers.
         captcha: Captcha
         captcha_description: Refresh page to get new captcha.
     placeholders:
       session:
         email: username or example@mail.com
         password: Your password
+    button:
+      cancel: Cancel
+      sign_in: Sign In
+
   simple_form:
     placeholders:
       deposit:

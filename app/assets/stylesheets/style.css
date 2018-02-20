@@ -1,0 +1,49 @@
+
+.header__chart{
+	height: 95px;
+	width: 791.8px/*932px*/;
+	background: #f3f3f3;
+	padding-top: 11px;
+	color: #303030;
+	position: relative;
+}
+
+.parametrs{
+	background:#e1e1e1;
+	border-radius: 3px;
+	width: 500px;
+	margin-top: 20px;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.parametrs,.header_title{
+	margin-left: 15px;
+}
+
+.num{
+	font-size: 12px;
+}
+
+.right_header,.right_param{
+	position: absolute;
+	right: 0;
+	margin-right:20px ; 
+
+}
+
+.right_header a, .right_param a{
+	color: #303030;
+	text-decoration: none;
+	}    
+
+.right_header a:hover, .right_param a:hover{
+	color: #2fcde7;
+}
+
+.header_title {
+	font-size: 16px;
+    word-spacing: 5px;
+}

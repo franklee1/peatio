@@ -1,20 +1,30 @@
 doctype html
 html lang="en"
   head
+    meta[charset="utf-8"]
+    meta[http-equiv="X-UA-Compatible" content="IE=edge"]
+    meta[name="viewport" content="width=device-width, initial-scale=1"]
     link href="/favicon.ico" rel="shortcut icon"
     = include_gon
     - stylesheet = content_for?(:stylesheet) ? yield(:stylesheet) : "application"
     = stylesheet_link_tag stylesheet, media: "all"
     = javascript_include_tag "application"
+    / = stylesheet_link_tag 'main-old'
     = stylesheet_link_tag 'main'
+    / = stylesheet_link_tag 'main22'
+    / = stylesheet_link_tag 'main33'
+    / = stylesheet_link_tag 'mobile_grid'
+    / = stylesheet_link_tag 'style'
     = stylesheet_link_tag 'vendor'
+     link[rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous"]
+    link[href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"]
     = javascript_include_tag "locales/#{I18n.locale}"
     = yield(:scripts) if content_for?(:scripts)
     = render 'shared/html5'
     = render 'shared/meta'
     = csrf_meta_tags
 
-  body id='#{body_id}' data-lang="#{locale_name}"
+  body.main
     = render 'shared/alert'
 
     #wrap

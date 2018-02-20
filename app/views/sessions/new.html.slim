@@ -1,39 +1,37 @@
-.content-form
-  .form-login
-    = form_for @identity, url: '/auth/identity/callback', method: :post do |f|
-      .form-label
-        = t'form_for.labels.session.email'
-        span
-          |  *
-      .form-inputs
-        = f.text_field :email,
-          placeholder: (t'form_for.placeholders.session.email'),
-          name: 'auth_key'
-      .form-label
-        = t('form_for.labels.session.password')
-        span
-          |  *
-      .form-inputs
-        = f.password_field :password,
-          placeholder: (t'form_for.placeholders.session.password'),
-          name: 'password'
-      .form-label-desc
-        span.hint-text
-          p
-            = t'form_for.labels.session.password_description_1'
-          p
-            = t('form_for.labels.session.password_description_2')
-        span.forgot-pass.pull-right
-          = link_to t('.reset_password'), new_reset_password_path
-      .form-label
-        = t('form_for.labels.session.captcha')
-        span
-          |  *
-      .form-inputs
-        = show_simple_captcha label: ''
-      .form-label-desc
-        span.hint-text
-          = t('form_for.labels.session.captcha_description')
-      .form-buttons
-        = link_to 'Cancel', root_path, class: 'cancel'
-        =f.submit t('header.signin'), class: 'signin'
+= form_for @identity, url: '/auth/identity/callback', method: :post do |f|
+  .form-label
+    = t'form_for.labels.session.email'
+    span
+      |  *
+  .form-inputs
+    = f.text_field :email,
+      placeholder: (t'form_for.placeholders.session.email'),
+      name: 'auth_key'
+  .form-label2
+    = t('form_for.labels.session.password')
+    span
+      |  *
+  .form-inputs
+    = f.password_field :password,
+      placeholder: (t'form_for.placeholders.session.password'),
+      name: 'password'
+  .form-label-desc
+    span.hint-text
+      p
+        = t('form_for.labels.session.password_description_1')
+      p
+        = t('form_for.labels.session.password_description_2')
+    span.forgot-pass.pull-right
+      = link_to t('.reset_password'), new_reset_password_path
+  .form-label
+    = t('form_for.labels.session.captcha')
+    span
+      |  *
+  .form-inputs.captcha
+    = show_simple_captcha label: ''
+  .form-label-desc
+    span.hint-text
+      = t('form_for.labels.session.captcha_description')
+  .form-buttons
+    = link_to t('form_for.cancel'), root_path, class: 'cancel'
+    = link_to t('form_for.button.sign_in'), "#", onclick: "$('#new_identity').submit()", class: 'signin'
