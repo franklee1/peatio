@@ -1,13 +1,39 @@
-= simple_form_for @identity, :url => '/auth/identity/callback', :method => :post do |f|
-  = f.input :email, :input_html => {:name => 'auth_key', :autofocus => 'true'}, label: t('simple_form.labels.session.email'), placeholder: t('simple_form.placeholders.session.email')
-  = f.input :password, :as => 'password', :input_html => {:name => 'password'}, label: t('simple_form.labels.session.password'), placeholder: t('simple_form.placeholders.session.password')
-  - if require_captcha?
-    = f.input :captcha, required: true, label: t('simple_form.labels.session.captcha') do
-      = show_simple_captcha
-  hr.split
-  = f.button :wrapped, t('header.signin'), cancel: root_path
-
-= content_for :guide do
-  ul.list-unstyled
-    li: a href='#{new_reset_password_path}' = t('.reset_password')
-    li: a href='#{signup_path}' = t('header.signup')
+.content-form
+  .form-login
+    = form_for @identity, url: '/auth/identity/callback', method: :post do |f|
+      .form-label
+        = t'form_for.labels.session.email'
+        span
+          |  *
+      .form-inputs
+        = f.text_field :email,
+          placeholder: (t'form_for.placeholders.session.email'),
+          name: 'auth_key'
+      .form-label
+        = t('form_for.labels.session.password')
+        span
+          |  *
+      .form-inputs
+        = f.password_field :password,
+          placeholder: (t'form_for.placeholders.session.password'),
+          name: 'password'
+      .form-label-desc
+        span.hint-text
+          p
+            = t'form_for.labels.session.password_description_1'
+          p
+            = t('form_for.labels.session.password_description_2')
+        span.forgot-pass.pull-right
+          = link_to t('.reset_password'), new_reset_password_path
+      .form-label
+        = t('form_for.labels.session.captcha')
+        span
+          |  *
+      .form-inputs
+        = show_simple_captcha label: ''
+      .form-label-desc
+        span.hint-text
+          = t('form_for.labels.session.captcha_description')
+      .form-buttons
+        = link_to 'Cancel', root_path, :class => 'cancel'
+        =f.submit t('header.signin'), :class => 'signin'

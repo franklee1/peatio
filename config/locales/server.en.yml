@@ -1016,7 +1016,7 @@ en:
       panel: Login
       new:
         title: Login my account
-        intro: Login Peatio now for you to exchange.
+        intro: Login CoinxPro now for you to exchange.
       failure:
         title: Login my account
         intro: Login Peatio now for you to exchange.
@@ -1031,6 +1031,19 @@ en:
         title: Reset Password
     two_factors:
       panel: Two Factor Authenticator
+  form_for:
+    labels:
+      session:
+        email: Username or Email
+        password: Password
+        password_description_1: Set a password which has at least 6 characters and it's better
+        password_description_2: to contain uppercase and lowercase letters and numbers.
+        captcha: Captcha
+        captcha_description: Refresh page to get new captcha.
+    placeholders:
+      session:
+        email: username or example@mail.com
+        password: Your password
   simple_form:
     placeholders:
       deposit:
@@ -1117,7 +1130,7 @@ en:
         address: Address
         category: Category
       session:
-        email: Sign In E-mail
+        email: Username or Email
         password: Sign In Password
         captcha: Captcha
       identity:
