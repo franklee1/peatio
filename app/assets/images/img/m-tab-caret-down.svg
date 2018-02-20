@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   viewBox="0 0 15 21"
+   x="0px"
+   y="0px"
+   id="svg3382"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="m-tab-caret-down1.svg"
+   width="15"
+   height="21">
+  <metadata
+     id="metadata3396">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>arrow-right</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3394" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1301"
+     inkscape:window-height="744"
+     id="namedview3392"
+     showgrid="false"
+     inkscape:zoom="15.175"
+     inkscape:cx="22.5"
+     inkscape:cy="22.635914"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3382" />
+  <title
+     id="title3384">arrow-right</title>
+  <path
+     d="m 14.337901,10.705755 -13.72799985,-9.753 0,19.507 13.72799985,-9.753 z"
+     id="path3386"
+     inkscape:connector-curvature="0"
+     style="fill:#a3a3a3" />
+  <text
+     x="0"
+     y="28"
+     font-size="5px"
+     font-weight="bold"
+     id="text3388"
+     style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#a3a3a3">Created by O s t r e a</text>
+  <text
+     x="0"
+     y="33"
+     font-size="5px"
+     font-weight="bold"
+     id="text3390"
+     style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#a3a3a3">from the Noun Project</text>
+</svg>
