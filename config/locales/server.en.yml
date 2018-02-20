@@ -1531,7 +1531,8 @@ en:
     admin: Admin Panel
     market: Trade
     settings: Profile
-    signin: Sign In
+    signin: sign in
+    register: register
     signout: Exit
     signup: Sign Up
     login_via_weibo: Login via Weibo
