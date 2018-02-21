@@ -170,7 +170,7 @@ module ApplicationHelper
   end
 
   def guide_intro
-    @guide_intro || t("guides.#{i18n_controller_path}.#{action_name}.intro", default: t("guides.#{i18n_controller_path}.intro", default: ''))
+    @guide_intro ||( raw t("guides.#{i18n_controller_path}.#{action_name}.intro_html", default: t("guides.#{i18n_controller_path}.intro", default: '')))
   end
 
   def i18n_controller_path

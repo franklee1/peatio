@@ -1016,16 +1016,16 @@ en:
       panel: Login
       new:
         title: Login my account
-        intro: Login CoinxPro now for you to exchange.
+        intro_html: <p>Login CoinxPro now for you to exchange.</p>
       failure:
         title: Login my account
         intro: Login Peatio now for you to exchange.
     identities:
       panel: Create Account
       new:
-        title: Create My Account
-        intro: This will be your only ID on Peatio which is necessary for your exchange
-          , deposit and withdrawal . please fill it out carefully.
+        title: Create account
+        intro_html: <p>This will be your only ID on CoinxPro which is necessary for your exchange,</p>
+           <p>deposit and withdrawal, please fill it out carefully. <a href="/signin">Sign In.</a></p>
       edit:
         panel: My Account
         title: Reset Password
@@ -1040,10 +1040,21 @@ en:
         password_description_2: contain uppercase and lowercase letters and numbers.
         captcha: Captcha
         captcha_description: Refresh page to get new captcha.
+      register: 
+        username: Username
+        email: Email
+        new_password: New password
+        password_confirmation: Confirm new password
+        password_description_html: <p>Set a password which has at least 6 characters and it's better to</p><p>contain uppercase and lowercase letters and numbers.</p><p><span class="forgot-pass pull-right"><a href="#">Forgot Password</a></span></p>
     placeholders:
       session:
         email: username or example@mail.com
         password: Your password
+      register: 
+        username: Your name
+        email: example@mail.com
+        new_password: Please set your login password
+        password_confirmation: Confirm your password
     button:
       cancel: Cancel
       sign_in: Sign In
