@@ -15,8 +15,7 @@ main
               p
                 span.title-header
                   = guide_title
-              p.text-ignore
-               = guide_intro
+              = guide_intro
 
             - if content_for?(:guide)
               = yield(:guide)
