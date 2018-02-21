@@ -34,4 +34,6 @@
       = t('form_for.labels.session.captcha_description')
   .form-buttons
     = link_to t('form_for.cancel'), root_path, class: 'cancel'
+    span
+      |  
     = link_to t('form_for.button.sign_in'), "#", onclick: "$('#new_identity').submit()", class: 'signin'

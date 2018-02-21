@@ -8,6 +8,7 @@ gem 'daemons-rails'
 gem 'redis-rails'
 gem 'pry-rails'
 
+gem 'pg'
 gem 'rotp'
 gem 'json'
 gem 'jbuilder', '~> 2.4', '>= 2.4.1'

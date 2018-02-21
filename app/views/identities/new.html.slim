@@ -1,16 +1,3 @@
-/ = simple_form_for @identity, :url => '/auth/identity/register' do |f|
-/   = f.input :email, :input_html => {:name => 'email', :autofocus => 'true'}
-/   = f.input :password, :input_html => {:name => 'password'}
-/   = f.input :password_confirmation, :input_html => {:name => 'password_confirmation'}
-/   hr.split
-/   = f.button :wrapped, t('header.signup'), cancel: root_path
-
-/ = content_for :guide do
-/   ul.list-unstyled
-/     li: a href='#{signin_path}'= t('.signin')
-
-
-
 = form_for @identity, url: '/auth/identity/register', method: :post do |f|
   .form-label
     = t'form_for.labels.register.username'
@@ -20,44 +7,45 @@
     = f.text_field :email,
       placeholder: (t'form_for.placeholders.register.username'),
       name: 'auth_key'
-  .form-label
+  .form-label2
     = t'form_for.labels.register.email'
     span
       |  *
   .form-inputs
     = f.text_field :email,
-      placeholder: (t'form_for.placeholders.register.email'),
-      name: 'auth_key'
+      placeholder: (t'form_for.placeholders.register.email')
   .form-label
     = t('form_for.labels.register.new_password')
     span
       |  *
   .form-inputs
     = f.password_field :password,
-      placeholder: (t'form_for.placeholders.register.new_password'),
-      name: 'password'
+      placeholder: (t'form_for.placeholders.register.new_password')
   .form-label-desc
     span.hint-text
       = t('form_for.labels.register.password_description_html')
+    span.forgot-pass.pull-right
+      = link_to t('form_for.labels.register.forgot_password')
   .form-label
     = t('form_for.labels.register.password_confirmation')
     span
       |  *
   .form-inputs
-    = f.password_field :password,
-      placeholder: (t'form_for.placeholders.register.password_confirmation'),
-      name: 'password'
+    = f.password_field :password_confirmation,
+      placeholder: (t'form_for.placeholders.register.password_confirmation')
   .form-label
-    = t('form_for.labels.session.captcha')
+    = t('form_for.labels.register.captcha')
     span
       |  *
   .form-inputs.captcha
     = show_simple_captcha label: ''
   .form-label-desc
     span.hint-text
-      = t('form_for.labels.session.captcha_description')
+      = t('form_for.labels.register.captcha_description')
   .form-buttons
     = link_to t('form_for.cancel'), root_path, class: 'cancel'
+    span
+      |  
     = link_to t('form_for.button.sign_in'), "#", onclick: "$('#new_identity').submit()", class: 'signin'
 
 
